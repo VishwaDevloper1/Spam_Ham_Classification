@@ -1,0 +1,25 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Spam or Ham</title>
+</head>
+<body>
+<div class="container">
+    <h1>SMS Spam-Ham Classification</h1>
+    <form method="POST">
+        <label for="sms_input">Enter SMS:</label><br>
+        <textarea name="sms_input" id="sms_input" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction for: "{{ sms_input }}"</h2>
+        <p>This SMS is <strong>{{ prediction }}</strong>.</p>
+    {% endif %}
+</div>
+</body>
+</html>
