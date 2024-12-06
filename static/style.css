@@ -1,0 +1,114 @@
+/* General styles */
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    background: linear-gradient(135deg, #6bb3c5, #406bb6);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+/* Container styling */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Label styling */
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Textarea styling */
+textarea {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    resize: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+input[type="submit"] {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"]:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Prediction section styling */
+h2 {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ffeb3b;
+
+}
+
+/* Add responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    input[type="submit"] {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

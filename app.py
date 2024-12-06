@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from src.Components.main import SpamClassifier
 import os
 
@@ -14,8 +14,12 @@ def index():
     if request.method == "POST":
         sms_input = request.form["sms_input"]
         prediction = classifier.predict_message(sms_input)
-        return render_template("index.html", prediction=prediction, sms_input=sms_input)
-    return render_template("index.html", prediction=None)
+        return redirect(url_for("index", prediction=prediction, sms_input=sms_input))
+    prediction = request.args.get("prediction")
+    sms_input = request.args.get("sms_input")
+
+    return render_template("index.html", prediction=prediction, sms_input=sms_input)
+
 
 
 if __name__ == "__main__":
